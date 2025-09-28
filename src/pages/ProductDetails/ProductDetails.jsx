@@ -22,7 +22,8 @@ function ProductDetails() {
     const fetchProductDetails = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`https://dummyjson.com/products/${id}`);
+            const baseUrl = import.meta.env.VITE_APP_BASE_URL || 'https://dummyjson.com';
+            const response = await axios.get(`${baseUrl}/products/${id}`);
             setProduct(response.data);
             setError(null);
         } catch (err) {

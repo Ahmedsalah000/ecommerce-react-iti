@@ -34,6 +34,7 @@ function Navbar() {
                         </Nav.Link>
                         <Nav.Link href="#">Login</Nav.Link>
                         <Nav.Link as={Link} to="/register">Register</Nav.Link>
+                        <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                         <Dropdown>
                             <Dropdown.Toggle variant="light" id="language-dropdown">
                                 {language === 'ar' ? 'العربية' : 'English'}
